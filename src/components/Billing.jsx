@@ -1,6 +1,6 @@
 const Billing = () => {
   return (
-    <div>Billing</div>
+    <div></div>
   );
 };
 
