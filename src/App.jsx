@@ -1,11 +1,11 @@
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div>
+    <div className="p-5">
       app
     </div>
   );
-}
+};
 
 export default App;
