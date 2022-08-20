@@ -1,6 +1,5 @@
 import Billing from "./Billing.jsx";
 import Business from "./Business.jsx";
-import Button from "./Button.jsx";
 import CardDeal from "./CardDeal.jsx";
 import Clients from "./Clients.jsx";
 import Cta from "./CTA.jsx";
@@ -15,7 +14,6 @@ import Testimonials from "./Testimonials.jsx";
 export {
   Billing,
   Business,
-  Button,
   CardDeal,
   Clients,
   Cta,
