@@ -2,7 +2,6 @@ import styles from "./style.js";
 import {
   Billing,
   Business,
-  Button,
   CardDeal,
   Clients,
   Cta,

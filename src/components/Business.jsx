@@ -1,6 +1,25 @@
-import {features} from "../constants";
 import styles, {layout} from "../style.js";
 import Button from "./Button.jsx";
+import {features} from "../constants/index.js";
+
+const FeatureCard = ({index, id, icon, title, content}) => {
+  return (
+    <div className={`flex flex-row p-6 rounded-[20px] ${index !== features.length - 1 ? "mb-6" : "mb-0"} feature-card`}>
+      <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dimBlue`}>
+        <img
+          src={icon}
+          alt="icon"
+          className="w-[50%] h-[50%] object-contain"
+        />
+      </div>
+
+      <div className="flex flex-1 flex-col ml-3">
+        <h4 className="font-poppins font-semibold text-white text-[18px] leading-[23px] mb-1">{title}</h4>
+        <p className="font-poppins font-semibold text-white text-[18px] leading-[23px] mb-1">{content}</p>
+      </div>
+    </div>
+  );
+};
 
 const Business = () => {
   return (
@@ -14,6 +33,21 @@ const Business = () => {
           With the right credit card, you can improve your financial life by building credit, earning rewards and saving
           money. But with hundreds of credit card on the market.
         </p>
+
+        <Button styles="mt-10"/>
+      </div>
+
+      <div className={`${layout.sectionImg} flex-col`}>
+        {features.map((feature, index) => (
+          <FeatureCard
+            key={index}
+            index={index}
+            id={feature.id}
+            icon={feature.icon}
+            title={feature.title}
+            content={feature.content}
+          />
+        ))}
       </div>
     </section>
   );
